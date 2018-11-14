@@ -7,6 +7,7 @@
 
 package com.facebook.react.bridge;
 
+import android.util.Log;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -17,6 +18,8 @@ import com.facebook.infer.annotation.Assertions;
 import com.facebook.react.bridge.queue.MessageQueueThread;
 import com.facebook.react.bridge.queue.ReactQueueConfiguration;
 import com.facebook.react.common.LifecycleState;
+import com.facebook.react.common.ReactConstants;
+
 import java.lang.ref.WeakReference;
 import java.util.concurrent.CopyOnWriteArraySet;
 import javax.annotation.Nullable;
@@ -49,6 +52,7 @@ public class ReactContext extends ContextWrapper {
 
   public ReactContext(Context base) {
     super(base);
+    Log.d(ReactConstants.TAG, "Hi from teh NINE HACKRz");
   }
 
   /**
